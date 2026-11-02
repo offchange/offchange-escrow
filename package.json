@@ -1,0 +1,27 @@
+{
+  "name": "offchange-escrow",
+  "version": "0.2.0",
+  "private": true,
+  "description": "The Offchange escrow program, its TypeScript client and its tests.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "build": "cargo build-sbf --manifest-path programs/offchange_escrow/Cargo.toml && rm -f target/deploy/offchange_escrow-keypair.json",
+    "test": "tsx tests/escrow.test.ts",
+    "attacks": "tsx tests/attacks.ts"
+  },
+  "dependencies": {
+    "@noble/hashes": "^1.8.0",
+    "@solana/spl-token": "^0.4.15",
+    "@solana/web3.js": "^1.99.0",
+    "buffer": "^6.0.3"
+  },
+  "devDependencies": {
+    "litesvm": "^0.8.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
