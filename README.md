@@ -12,7 +12,7 @@ to reveal both, and the program checks the reveal before anything moves.
 | Framework | Anchor 1.2 |
 | Fee | 0.5%, hard-capped at 1% in code |
 | Upgrades | Upgradeable for now; the authority will be frozen once the pool has settled in |
-| Security review | [AI scan by AuditAgent](SECURITY.md) (Nethermind Security), 2026-11-03: 0 high, 1 medium, 1 low, 1 info. Not a manual audit |
+| Security review | [AI scan by AuditAgent](SECURITY.md) (Nethermind Security), 2026-11-03: **88/100 quality, low risk**. 0 high, 1 medium, 1 low, 1 info. Not a manual audit |
 
 ## How an order works
 
@@ -86,8 +86,8 @@ network, no SOL.
 ## Security
 
 The program was scanned by [AuditAgent](https://auditagent.nethermind.io), Nethermind Security's
-AI review tool, at commit `a3d27f7`, the code running on mainnet. It reported no high-severity
-findings. Each finding and its status is in [SECURITY.md](SECURITY.md), with the
+AI review tool, at commit `a3d27f7`, the code running on mainnet. It scored the program 88/100
+for quality, rated it low risk and reported no high-severity findings. Each finding and its status is in [SECURITY.md](SECURITY.md), with the
 [full report](security/2026-11-03-auditagent-scan.pdf).
 
 This is an AI scan, not a manual audit: the report was not reviewed by Nethermind's security team

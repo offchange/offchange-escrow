@@ -4,7 +4,7 @@
 
 | Date | Review | Scope | Result |
 |---|---|---|---|
-| 2026-11-03 | AI scan by [AuditAgent](https://auditagent.nethermind.io) (Nethermind Security) | `programs/offchange_escrow/src/lib.rs` at `a3d27f7` | 0 high, 1 medium, 1 low, 1 info. [Report](security/2026-11-03-auditagent-scan.pdf) |
+| 2026-11-03 | AI scan by [AuditAgent](https://auditagent.nethermind.io) (Nethermind Security) | `programs/offchange_escrow/src/lib.rs` at `a3d27f7` | **88/100 quality, low risk.** 0 high, 1 medium, 1 low, 1 info; 12 invariants generated. [Report](security/2026-11-03-auditagent-scan.pdf) |
 
 AuditAgent is an automated, AI-generated review. Its report was not checked by Nethermind's
 security team and is not a security audit. No manual third-party audit has been done yet.
