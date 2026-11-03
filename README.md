@@ -12,7 +12,7 @@ to reveal both, and the program checks the reveal before anything moves.
 | Framework | Anchor 1.2 |
 | Fee | 0.5%, hard-capped at 1% in code |
 | Upgrades | Upgradeable for now; the authority will be frozen once the pool has settled in |
-| Audit | Not audited by a third party yet |
+| Security review | [AI scan by AuditAgent](SECURITY.md) (Nethermind Security), 2026-11-03: 0 high, 1 medium, 1 low, 1 info. Not a manual audit |
 
 ## How an order works
 
@@ -85,9 +85,17 @@ network, no SOL.
 
 ## Security
 
-The program has not been audited by a third party. `tests/attacks.ts` covers the attacks found
-in our own review: fake reveals, fake matchers, over-fills, griefing donations into a vault,
-transfer-fee coins, stale orders and fee changes past the cap.
+The program was scanned by [AuditAgent](https://auditagent.nethermind.io), Nethermind Security's
+AI review tool, at commit `a3d27f7`, the code running on mainnet. It reported no high-severity
+findings. Each finding and its status is in [SECURITY.md](SECURITY.md), with the
+[full report](security/2026-11-03-auditagent-scan.pdf).
+
+This is an AI scan, not a manual audit: the report was not reviewed by Nethermind's security team
+and does not certify the program. A full third-party audit has not been done yet.
+
+`tests/attacks.ts` covers the attacks found in our own review: fake reveals, fake matchers,
+over-fills, griefing donations into a vault, transfer-fee coins, stale orders and fee changes past
+the cap.
 
 If you find a vulnerability, please report it privately through this repository's
 **Security → Report a vulnerability** tab rather than in a public issue.
